@@ -152,7 +152,7 @@
     .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
     .hero-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(245,241,236,0.4) 0%, rgba(250,249,246,0.1) 40%, rgba(59,47,47,0.35) 100%);
+      background: linear-gradient(to bottom, rgba(44,36,36,0.45) 0%, rgba(44,36,36,0.55) 50%, rgba(44,36,36,0.65) 100%);
     }
     .hero-glow {
       position: absolute; top: 20%; left: 10%;
@@ -181,13 +181,14 @@
     .hero h1 {
       font-size: clamp(2.5rem, 6.5vw, 4.5rem);
       color: #fff; line-height: 1.15; margin-bottom: 1.25rem;
-      text-shadow: 0 2px 40px rgba(59,47,47,0.15);
+      text-shadow: 0 2px 20px rgba(44,36,36,0.4), 0 4px 60px rgba(44,36,36,0.2);
       opacity: 0; transform: translateY(30px); animation: fadeUp 0.9s 0.4s forwards;
     }
     .hero h1 em { font-style: italic; font-weight: 400; display: block; }
     .hero p {
       font-size: clamp(0.95rem, 1.8vw, 1.1rem); font-weight: 300;
-      color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.8;
+      color: rgba(255,255,255,0.9); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.8;
+      text-shadow: 0 1px 10px rgba(44,36,36,0.3);
       opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s 0.6s forwards;
     }
     .hero-cta {
@@ -468,7 +469,7 @@
 
   <section class="hero">
     <div class="hero-bg">
-      <img src="images/living-room-1.jpg" alt="Cozy boho living room styled by Ghar By Sisters" />
+      <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-1_cv3yji.jpg" alt="Cozy boho living room styled by Ghar By Sisters" />
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-glow"></div>
@@ -497,22 +498,22 @@
       </div>
       <div class="services-grid">
         <div class="service-card reveal">
-          <div class="service-img"><img src="images/living-room-2.jpg" alt="Living room makeover" /></div>
+          <div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-2_yy0zj3.jpg" alt="Living room makeover" /></div>
           <h3>Living Room Makeover</h3>
           <p>Elevate your common spaces</p>
         </div>
         <div class="service-card reveal">
-          <div class="service-img"><img src="images/bedroom.jpg" alt="Bedroom styling" /></div>
+          <div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/bedroom_exzkg5.jpg" alt="Bedroom styling" /></div>
           <h3>Bedroom Styling</h3>
           <p>Create a sanctuary for rest</p>
         </div>
         <div class="service-card reveal">
-          <div class="service-img"><img src="images/plant-corner.jpg" alt="Plant styling" /></div>
+          <div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/plant-corner_vedntl.jpg" alt="Plant styling" /></div>
           <h3>Plant Styling</h3>
           <p>Bring nature inside your home</p>
         </div>
         <div class="service-card reveal">
-          <div class="service-img"><img src="images/staircase-gallery.jpg" alt="Gallery wall styling" /></div>
+          <div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244816/staircase-gallery_k0bvgp.jpg" alt="Gallery wall styling" /></div>
           <h3>Wall Art &amp; Gallery Walls</h3>
           <p>Meaningful art for every space</p>
         </div>
@@ -559,35 +560,31 @@
       </div>
       <div class="masonry">
         <div class="masonry-item reveal">
-          <img src="images/living-room-2.jpg" alt="Boho living room" />
+          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-2_yy0zj3.jpg" alt="Boho living room" />
           <div class="masonry-overlay"><span>Living Room Transformation</span></div>
         </div>
         <div class="masonry-item reveal">
-          <img src="images/dining-room.jpg" alt="Dining room styling" />
+          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/dining-room_lsoqc9.jpg" alt="Dining room styling" />
           <div class="masonry-overlay"><span>Dining Room Styling</span></div>
         </div>
         <div class="masonry-item reveal">
-          <img src="images/bedroom.jpg" alt="Bedroom makeover" />
+          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/bedroom_exzkg5.jpg" alt="Bedroom makeover" />
           <div class="masonry-overlay"><span>Bedroom Makeover</span></div>
         </div>
         <div class="masonry-item reveal">
-          <img src="images/staircase-plants.jpg" alt="Entryway with plants" />
+          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/staircase-plants_lemftp.jpg" alt="Entryway with plants" />
           <div class="masonry-overlay"><span>Entryway Design</span></div>
         </div>
         <div class="masonry-item reveal">
-          <img src="images/inspo-reading-nook.jpg" alt="Reading nook" />
-          <div class="masonry-overlay"><span>Reading Nook</span></div>
-        </div>
-        <div class="masonry-item reveal">
-          <img src="images/living-room-3.jpg" alt="Living room styling" />
+          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-3_gkjgn0.jpg" alt="Living room styling" />
           <div class="masonry-overlay"><span>Complete Room Makeover</span></div>
         </div>
         <div class="masonry-item reveal">
-          <img src="images/inspo-scandi.jpg" alt="Scandi-boho living room" />
+          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/inspo-scandi_isdhfo.jpg" alt="Scandi-boho living room" />
           <div class="masonry-overlay"><span>Scandi-Boho Fusion</span></div>
         </div>
         <div class="masonry-item reveal">
-          <img src="images/staircase-gallery.jpg" alt="Gallery wall" />
+          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244816/staircase-gallery_k0bvgp.jpg" alt="Gallery wall" />
           <div class="masonry-overlay"><span>Gallery Wall Setup</span></div>
         </div>
       </div>
@@ -598,7 +595,7 @@
     <div class="section-inner">
       <div class="about-grid">
         <div class="about-img-wrap reveal">
-          <img src="images/founder.jpg" alt="Founder of Ghar By Sisters" />
+          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/founder_oe4wqu.jpg" alt="Founder of Ghar By Sisters" />
           <div class="about-accent"></div>
           <div class="about-accent-2"></div>
         </div>
