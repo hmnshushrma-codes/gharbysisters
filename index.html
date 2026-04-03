@@ -10,27 +10,30 @@
     gtag('config', 'G-XXXXXXXXXX');
   </script>
 
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samrid | Home Styling & Makeover Services in Delhi | Spaces That Feel Like You</title>
-  <meta name="description" content="Samrid — Spaces That Feel Like You. Thoughtfully curated home makeover services in Delhi, India. Living room styling, bedroom makeovers, plant styling, and gallery wall design inspired by warmth, nature, and simplicity." />
-  <meta name="keywords" content="home makeover Delhi, interior styling India, living room makeover, bedroom styling, plant styling, gallery wall design, boho home decor, home decorator Delhi, Samrid" />
+  <title>Decodrama | Home Styling & Interior Makeover in Delhi | Where Every Space Tells a Story</title>
+  <meta name="description" content="Decodrama — Where Every Space Tells a Story. Professional home makeover & interior styling services in Delhi, India. Living room styling, bedroom makeovers, plant styling, and gallery wall design with boho, Scandinavian & modern decor." />
+  <meta name="keywords" content="home makeover Delhi, interior styling India, living room makeover, bedroom styling, plant styling, gallery wall design, boho home decor, Scandinavian decor, home decorator Delhi, interior designer Delhi, Decodrama" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#D6A77A" />
-  <link rel="canonical" href="https://samrid.in/" />
+  <link rel="canonical" href="https://decodrama.in/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Samrid | Home Styling & Makeover Services in Delhi" />
-  <meta property="og:description" content="Thoughtfully curated home makeovers inspired by warmth, nature, and simplicity. Transform your house into a home you'll love." />
+  <meta property="og:title" content="Decodrama | Home Styling & Interior Makeover in Delhi" />
+  <meta property="og:description" content="Where Every Space Tells a Story. Professional home makeovers inspired by warmth, nature, and simplicity. Transform your house into a home you'll love." />
   <meta property="og:image" content="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-1_cv3yji.jpg" />
-  <meta property="og:url" content="https://samrid.in/" />
-  <meta property="og:site_name" content="Samrid" />
+  <meta property="og:url" content="https://decodrama.in/" />
+  <meta property="og:site_name" content="Decodrama" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Samrid | Home Styling & Makeover Services in Delhi" />
-  <meta name="twitter:description" content="Thoughtfully curated home makeovers inspired by warmth, nature, and simplicity." />
+  <meta name="twitter:title" content="Decodrama | Home Styling & Interior Makeover in Delhi" />
+  <meta name="twitter:description" content="Where Every Space Tells a Story. Professional home makeovers inspired by warmth, nature, and simplicity." />
   <meta name="twitter:image" content="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-1_cv3yji.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,99 +68,30 @@
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { font-size: 16px; -webkit-font-smoothing: antialiased; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--off-white);
-      color: var(--text-primary);
-      overflow-x: hidden;
-      line-height: 1.7;
-    }
+    body { font-family: 'Poppins', sans-serif; background: var(--off-white); color: var(--text-primary); overflow-x: hidden; line-height: 1.7; }
     ::selection { background: var(--terracotta-light); color: var(--brown-dark); }
     .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
     img { opacity: 0; transition: opacity 0.8s ease; max-width: 100%; display: block; }
     img.loaded { opacity: 1; }
     h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; line-height: 1.2; }
-
-    .grain-overlay {
-      position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.02;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-
-    /* NAVBAR */
-    .navbar {
-      position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
-      background: rgba(250, 249, 246, 0.7);
-      backdrop-filter: blur(24px) saturate(1.3);
-      -webkit-backdrop-filter: blur(24px) saturate(1.3);
-      transition: all 0.5s var(--ease);
-      border-bottom: 1px solid transparent;
-    }
-    .navbar.scrolled {
-      background: rgba(250, 249, 246, 0.92);
-      border-bottom: 1px solid rgba(163, 177, 138, 0.15);
-      box-shadow: 0 2px 20px rgba(107, 79, 79, 0.04);
-    }
-    .navbar-inner {
-      max-width: 1320px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.1rem 2rem;
-    }
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem; font-weight: 700; color: var(--brown-dark);
-      text-decoration: none; letter-spacing: 0.02em;
-    }
+    .grain-overlay { position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.02; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+    .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: rgba(250, 249, 246, 0.7); backdrop-filter: blur(24px) saturate(1.3); -webkit-backdrop-filter: blur(24px) saturate(1.3); transition: all 0.5s var(--ease); border-bottom: 1px solid transparent; }
+    .navbar.scrolled { background: rgba(250, 249, 246, 0.92); border-bottom: 1px solid rgba(163, 177, 138, 0.15); box-shadow: 0 2px 20px rgba(107, 79, 79, 0.04); }
+    .navbar-inner { max-width: 1320px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 2rem; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; color: var(--brown-dark); text-decoration: none; letter-spacing: 0.02em; }
     .nav-links { display: flex; gap: 2.5rem; align-items: center; }
-    .nav-links a {
-      font-size: 0.8rem; font-weight: 500; color: var(--text-secondary);
-      text-decoration: none; letter-spacing: 0.03em;
-      position: relative; transition: color 0.4s var(--ease);
-    }
-    .nav-links a::after {
-      content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%);
-      width: 0; height: 2px; border-radius: 2px;
-      background: var(--terracotta); transition: width 0.4s var(--ease);
-    }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; letter-spacing: 0.03em; position: relative; transition: color 0.4s var(--ease); }
+    .nav-links a::after { content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); width: 0; height: 2px; border-radius: 2px; background: var(--terracotta); transition: width 0.4s var(--ease); }
     .nav-links a:hover, .nav-links a.active { color: var(--brown); }
     .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-    .nav-icons { display: flex; gap: 0.75rem; align-items: center; }
-    .nav-icons button {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: transparent; border: none; cursor: pointer;
-      color: var(--text-secondary); display: flex; align-items: center; justify-content: center;
-      transition: all 0.3s var(--ease);
-    }
-    .nav-icons button:hover { background: var(--warm-beige); color: var(--brown); }
-
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      background: none; border: none; cursor: pointer; padding: 6px; z-index: 200;
-    }
-    .hamburger span {
-      display: block; width: 22px; height: 1.5px;
-      background: var(--brown); border-radius: 4px;
-      transition: all 0.4s var(--ease); transform-origin: center;
-    }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 200; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--brown); border-radius: 4px; transition: all 0.4s var(--ease); transform-origin: center; }
     .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
     .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
-
-    .mobile-menu {
-      position: fixed; inset: 0; z-index: 150;
-      background: var(--off-white);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 2.5rem;
-      transform: translateY(-100%); opacity: 0;
-      transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.5s ease;
-      pointer-events: none;
-    }
+    .mobile-menu { position: fixed; inset: 0; z-index: 150; background: var(--off-white); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; transform: translateY(-100%); opacity: 0; transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.5s ease; pointer-events: none; }
     .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
-    .mobile-menu a {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem; color: var(--brown); text-decoration: none;
-      opacity: 0; transform: translateY(25px);
-      transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s;
-    }
+    .mobile-menu a { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--brown); text-decoration: none; opacity: 0; transform: translateY(25px); transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s; }
     .mobile-menu.open a { opacity: 1; transform: translateY(0); }
     .mobile-menu.open a:nth-child(1) { transition-delay: 0.12s; }
     .mobile-menu.open a:nth-child(2) { transition-delay: 0.2s; }
@@ -165,302 +99,114 @@
     .mobile-menu.open a:nth-child(4) { transition-delay: 0.36s; }
     .mobile-menu.open a:nth-child(5) { transition-delay: 0.44s; }
     .mobile-menu a:hover { color: var(--terracotta); }
-
-    /* HERO */
-    .hero {
-      position: relative; min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg, var(--warm-beige), var(--terracotta-light));
-    }
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, var(--warm-beige), var(--terracotta-light)); }
     .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(214,167,122,0.15) 0%, rgba(44,36,36,0.25) 40%, rgba(44,36,36,0.45) 100%);
-    }
-    .hero-glow {
-      position: absolute; top: 15%; left: 5%;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(214,167,122,0.35) 0%, rgba(245,241,236,0.1) 50%, transparent 70%);
-      border-radius: 50%; filter: blur(80px); pointer-events: none;
-    }
-    .hero-glow-2 {
-      position: absolute; bottom: 10%; right: 5%;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(163,177,138,0.25) 0%, rgba(197,212,179,0.1) 50%, transparent 70%);
-      border-radius: 50%; filter: blur(80px); pointer-events: none;
-    }
-    .hero-content {
-      position: relative; z-index: 2; text-align: center;
-      padding: 0 1.5rem; max-width: 780px;
-    }
-    .hero-tag {
-      display: inline-block;
-      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase;
-      color: rgba(255,255,255,0.85); margin-bottom: 1.5rem;
-      padding: 0.5rem 1.25rem; border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 50px; backdrop-filter: blur(10px); background: rgba(255,255,255,0.12);
-      opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s 0.2s forwards;
-    }
-    .hero h1 {
-      font-size: clamp(2.5rem, 6.5vw, 4.5rem);
-      color: #fff; line-height: 1.15; margin-bottom: 1.25rem;
-      text-shadow: 0 2px 16px rgba(44,36,36,0.3), 0 4px 40px rgba(44,36,36,0.15);
-      opacity: 0; transform: translateY(30px); animation: fadeUp 0.9s 0.4s forwards;
-    }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(214,167,122,0.15) 0%, rgba(44,36,36,0.25) 40%, rgba(44,36,36,0.45) 100%); }
+    .hero-glow { position: absolute; top: 15%; left: 5%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(214,167,122,0.35) 0%, rgba(245,241,236,0.1) 50%, transparent 70%); border-radius: 50%; filter: blur(80px); pointer-events: none; }
+    .hero-glow-2 { position: absolute; bottom: 10%; right: 5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(163,177,138,0.25) 0%, rgba(197,212,179,0.1) 50%, transparent 70%); border-radius: 50%; filter: blur(80px); pointer-events: none; }
+    .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 1.5rem; max-width: 780px; }
+    .hero-tag { display: inline-block; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; padding: 0.5rem 1.25rem; border: 1px solid rgba(255,255,255,0.3); border-radius: 50px; backdrop-filter: blur(10px); background: rgba(255,255,255,0.12); opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s 0.2s forwards; }
+    .hero h1 { font-size: clamp(2.5rem, 6.5vw, 4.5rem); color: #fff; line-height: 1.15; margin-bottom: 1.25rem; text-shadow: 0 2px 16px rgba(44,36,36,0.3), 0 4px 40px rgba(44,36,36,0.15); opacity: 0; transform: translateY(30px); animation: fadeUp 0.9s 0.4s forwards; }
     .hero h1 em { font-style: italic; font-weight: 400; display: block; }
-    .hero p {
-      font-size: clamp(0.95rem, 1.8vw, 1.1rem); font-weight: 300;
-      color: rgba(255,255,255,0.9); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.8;
-      text-shadow: 0 1px 8px rgba(44,36,36,0.2);
-      opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s 0.6s forwards;
-    }
-    .hero-cta {
-      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
-      opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s 0.8s forwards;
-    }
-    .hero-fade {
-      position: absolute; bottom: 0; left: 0; width: 100%;
-      height: 200px; background: linear-gradient(to top, var(--off-white), transparent); z-index: 1;
-    }
-    .scroll-cue {
-      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
-      z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
-      opacity: 0; animation: fadeUp 0.8s 1.2s forwards;
-    }
+    .hero p { font-size: clamp(0.95rem, 1.8vw, 1.1rem); font-weight: 300; color: rgba(255,255,255,0.9); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.8; text-shadow: 0 1px 8px rgba(44,36,36,0.2); opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s 0.6s forwards; }
+    .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s 0.8s forwards; }
+    .hero-fade { position: absolute; bottom: 0; left: 0; width: 100%; height: 200px; background: linear-gradient(to top, var(--off-white), transparent); z-index: 1; }
+    .scroll-cue { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; opacity: 0; animation: fadeUp 0.8s 1.2s forwards; }
     .scroll-cue span { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 500; }
     .scroll-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.4); animation: pulse 2s infinite; }
     @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
     @keyframes pulse { 0%,100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 1; transform: scale(1.3); } }
-
-    /* BUTTONS */
-    .btn-primary {
-      display: inline-block; background: var(--terracotta); color: var(--white);
-      padding: 0.9rem 2.25rem; border-radius: 50px;
-      font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.85rem;
-      letter-spacing: 0.04em; text-decoration: none; border: none; cursor: pointer;
-      box-shadow: var(--shadow-glow); transition: all 0.4s var(--ease);
-    }
+    .btn-primary { display: inline-block; background: var(--terracotta); color: var(--white); padding: 0.9rem 2.25rem; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.85rem; letter-spacing: 0.04em; text-decoration: none; border: none; cursor: pointer; box-shadow: var(--shadow-glow); transition: all 0.4s var(--ease); }
     .btn-primary:hover { background: var(--terracotta-dark); transform: translateY(-2px); box-shadow: 0 12px 50px rgba(214,167,122,0.25); }
     .btn-primary:active { transform: scale(0.97) translateY(0); }
-    .btn-outline {
-      display: inline-block; background: transparent;
-      padding: 0.9rem 2.25rem; border-radius: 50px;
-      border: 1.5px solid rgba(255,255,255,0.4); color: #fff;
-      font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.85rem;
-      letter-spacing: 0.04em; text-decoration: none; cursor: pointer;
-      transition: all 0.4s var(--ease);
-    }
+    .btn-outline { display: inline-block; background: transparent; padding: 0.9rem 2.25rem; border-radius: 50px; border: 1.5px solid rgba(255,255,255,0.4); color: #fff; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.85rem; letter-spacing: 0.04em; text-decoration: none; cursor: pointer; transition: all 0.4s var(--ease); }
     .btn-outline:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
-    .btn-text {
-      font-weight: 500; font-size: 0.85rem; color: var(--terracotta);
-      text-decoration: none; border-bottom: 1.5px solid var(--terracotta);
-      padding-bottom: 2px; transition: all 0.3s var(--ease);
-    }
+    .btn-text { font-weight: 500; font-size: 0.85rem; color: var(--terracotta); text-decoration: none; border-bottom: 1.5px solid var(--terracotta); padding-bottom: 2px; transition: all 0.3s var(--ease); }
     .btn-text:hover { color: var(--terracotta-dark); border-color: var(--terracotta-dark); }
-
-    /* SECTIONS */
     .section { padding: 7rem 2rem; position: relative; }
     .section-inner { max-width: 1200px; margin: 0 auto; }
-    .section-tag {
-      display: inline-block; font-size: 0.65rem; font-weight: 600;
-      letter-spacing: 0.25em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 0.75rem;
-    }
+    .section-tag { display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 0.75rem; }
     .section-title { font-size: clamp(1.8rem, 3.5vw, 2.75rem); line-height: 1.2; color: var(--text-primary); }
     .section-subtitle { font-size: 0.95rem; color: var(--text-secondary); font-weight: 300; max-width: 480px; line-height: 1.7; margin-top: 0.6rem; }
     .reveal { opacity: 0; transform: translateY(35px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* SERVICES */
     .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1rem; }
     .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem; }
     .service-card { cursor: pointer; transition: transform 0.5s var(--ease); }
     .service-card:nth-child(even) { margin-top: 2rem; }
     .service-card:hover { transform: translateY(-6px); }
-    .service-img {
-      aspect-ratio: 3/4; border-radius: var(--radius-lg); overflow: hidden;
-      margin-bottom: 1.25rem; position: relative;
-      box-shadow: var(--shadow-sm); transition: box-shadow 0.5s var(--ease);
-    }
+    .service-img { aspect-ratio: 3/4; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1.25rem; position: relative; box-shadow: var(--shadow-sm); transition: box-shadow 0.5s var(--ease); }
     .service-card:hover .service-img { box-shadow: var(--shadow-lg); }
     .service-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease), opacity 0.8s var(--ease); }
     .service-card:hover .service-img img { transform: scale(1.06); }
-    .service-img::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(59,47,47,0.2), transparent 60%);
-      border-radius: var(--radius-lg);
-    }
+    .service-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(59,47,47,0.2), transparent 60%); border-radius: var(--radius-lg); }
     .service-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.2rem; }
     .service-card p { font-size: 0.8rem; color: var(--text-muted); }
-
-    /* PROCESS */
     .process-section { background: var(--warm-beige); }
     .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 3.5rem; }
-    .process-card {
-      text-align: center; padding: 2.5rem 1.5rem;
-      border-radius: var(--radius-xl); background: var(--off-white);
-      box-shadow: var(--shadow-sm); transition: all 0.5s var(--ease);
-    }
+    .process-card { text-align: center; padding: 2.5rem 1.5rem; border-radius: var(--radius-xl); background: var(--off-white); box-shadow: var(--shadow-sm); transition: all 0.5s var(--ease); }
     .process-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-    .process-icon {
-      width: 60px; height: 60px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--sage-light), var(--sage));
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 1.25rem; color: var(--white);
-    }
+    .process-icon { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--sage-light), var(--sage)); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; color: var(--white); }
     .process-num { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--sage); margin-bottom: 0.75rem; }
     .process-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
     .process-card p { font-size: 0.85rem; color: var(--text-secondary); font-weight: 300; line-height: 1.7; }
-
-    /* GALLERY */
     .inspiration-section { background: var(--warm-beige); }
     .masonry { columns: 3; column-gap: 1.25rem; }
-    .masonry-item {
-      break-inside: avoid; margin-bottom: 1.25rem;
-      border-radius: var(--radius-lg); overflow: hidden;
-      position: relative; cursor: pointer;
-      box-shadow: var(--shadow-sm); transition: box-shadow 0.5s var(--ease);
-    }
+    .masonry-item { break-inside: avoid; margin-bottom: 1.25rem; border-radius: var(--radius-lg); overflow: hidden; position: relative; cursor: pointer; box-shadow: var(--shadow-sm); transition: box-shadow 0.5s var(--ease); }
     .masonry-item:hover { box-shadow: var(--shadow-lg); }
     .masonry-item img { width: 100%; display: block; transition: transform 1.2s var(--ease), opacity 0.8s var(--ease); }
     .masonry-item:hover img { transform: scale(1.06); }
-    .masonry-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(107,79,79,0.5) 0%, transparent 60%);
-      display: flex; align-items: flex-end; padding: 1.5rem;
-      opacity: 0; transition: opacity 0.5s var(--ease);
-    }
+    .masonry-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(107,79,79,0.5) 0%, transparent 60%); display: flex; align-items: flex-end; padding: 1.5rem; opacity: 0; transition: opacity 0.5s var(--ease); }
     .masonry-item:hover .masonry-overlay { opacity: 1; }
     .masonry-overlay span { color: var(--white); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; }
-
-    /* ABOUT */
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
     .about-img-wrap { position: relative; }
-    .about-img-wrap img {
-      width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top;
-      border-radius: var(--radius-xl); box-shadow: var(--shadow-md);
-    }
-    .about-accent {
-      position: absolute; bottom: -1.5rem; right: -1.5rem;
-      width: 50%; aspect-ratio: 1; border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, var(--sage-light), var(--sage));
-      opacity: 0.2; z-index: -1;
-    }
-    .about-accent-2 {
-      position: absolute; top: -1rem; left: -1rem;
-      width: 80px; height: 80px; border-radius: 50%;
-      border: 2px solid var(--terracotta-light); opacity: 0.4; z-index: -1;
-    }
+    .about-img-wrap img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); }
+    .about-accent { position: absolute; bottom: -1.5rem; right: -1.5rem; width: 50%; aspect-ratio: 1; border-radius: var(--radius-xl); background: linear-gradient(135deg, var(--sage-light), var(--sage)); opacity: 0.2; z-index: -1; }
+    .about-accent-2 { position: absolute; top: -1rem; left: -1rem; width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--terracotta-light); opacity: 0.4; z-index: -1; }
     .about-text h2 { margin-bottom: 1.5rem; }
     .about-text p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 1rem; font-weight: 300; }
-    .about-text blockquote {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem; font-style: italic;
-      color: var(--terracotta-dark); border-left: 3px solid var(--terracotta-light);
-      padding-left: 1.25rem; margin: 1.75rem 0; line-height: 1.6;
-    }
-
-    /* TESTIMONIAL */
+    .about-text blockquote { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; color: var(--terracotta-dark); border-left: 3px solid var(--terracotta-light); padding-left: 1.25rem; margin: 1.75rem 0; line-height: 1.6; }
     .testimonial-section { background: var(--brown); position: relative; overflow: hidden; }
-    .testimonial-section::before {
-      content: ''; position: absolute; top: -100px; right: -100px;
-      width: 400px; height: 400px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(214,167,122,0.1), transparent 70%);
-    }
+    .testimonial-section::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(214,167,122,0.1), transparent 70%); }
     .testimonial-inner { max-width: 750px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
     .testimonial-section .section-tag { color: var(--terracotta-light); }
-    .testimonial-quote {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-      font-style: italic; line-height: 1.65;
-      color: rgba(255,255,255,0.85); margin-bottom: 2rem;
-    }
+    .testimonial-quote { font-family: 'Playfair Display', serif; font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-style: italic; line-height: 1.65; color: rgba(255,255,255,0.85); margin-bottom: 2rem; }
     .testimonial-author { font-size: 0.8rem; color: var(--terracotta-light); letter-spacing: 0.15em; font-weight: 500; text-transform: uppercase; }
     .testimonial-stars { margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 0.25rem; }
     .testimonial-stars span { color: var(--terracotta-light); font-size: 1.1rem; }
-
-    /* CONTACT */
     .contact-section { background: var(--warm-beige); }
     .contact-inner { max-width: 680px; margin: 0 auto; text-align: center; }
     .contact-form { margin-top: 2.5rem; text-align: left; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-    .form-group label {
-      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--text-muted); padding-left: 0.75rem;
-    }
-    .form-group input, .form-group textarea {
-      padding: 0.9rem 1.25rem; border: 1.5px solid rgba(163,177,138,0.2);
-      border-radius: var(--radius); background: var(--off-white);
-      font-family: 'Poppins', sans-serif; font-size: 0.875rem; font-weight: 300;
-      outline: none; transition: all 0.4s var(--ease); resize: vertical; color: var(--text-primary);
-    }
+    .form-group label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); padding-left: 0.75rem; }
+    .form-group input, .form-group textarea { padding: 0.9rem 1.25rem; border: 1.5px solid rgba(163,177,138,0.2); border-radius: var(--radius); background: var(--off-white); font-family: 'Poppins', sans-serif; font-size: 0.875rem; font-weight: 300; outline: none; transition: all 0.4s var(--ease); resize: vertical; color: var(--text-primary); }
     .form-group input:focus, .form-group textarea:focus { border-color: var(--sage); box-shadow: 0 0 0 3px rgba(163,177,138,0.1); }
     .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); font-weight: 300; }
     .form-submit { text-align: center; margin-top: 1.75rem; }
-
-    /* FOOTER */
+    .form-error { font-size: 0.72rem; color: #c0392b; font-weight: 400; min-height: 1rem; padding-left: 0.75rem; }
+    .form-group input.invalid, .form-group textarea.invalid { border-color: #c0392b; }
+    .cf-turnstile { display: flex; justify-content: center; margin-top: 1.25rem; }
     footer { background: var(--off-white); padding: 4rem 2rem 1.5rem; border-top: 1px solid rgba(163,177,138,0.12); }
-    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; }
     .footer-brand .logo { font-size: 1.6rem; }
     .footer-brand p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.75; max-width: 300px; margin-top: 0.75rem; font-weight: 300; }
     .footer-col h4 { font-family: 'Poppins', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 1rem; }
     .footer-col a { display: block; font-size: 0.82rem; color: var(--text-muted); text-decoration: none; margin-bottom: 0.6rem; font-weight: 300; transition: color 0.3s var(--ease); }
     .footer-col a:hover { color: var(--terracotta); }
-    .footer-bottom {
-      max-width: 1200px; margin: 2.5rem auto 0; padding-top: 1.5rem;
-      border-top: 1px solid rgba(163,177,138,0.1);
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
-    }
+    .footer-bottom { max-width: 1200px; margin: 2.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(163,177,138,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     .footer-bottom p { font-size: 0.7rem; color: var(--text-muted); font-weight: 300; }
     .footer-social { display: flex; gap: 1.5rem; }
     .footer-social a { font-size: 0.75rem; color: var(--text-muted); text-decoration: none; font-weight: 400; transition: color 0.3s var(--ease); }
     .footer-social a:hover { color: var(--terracotta); }
-
-    .back-to-top {
-      position: fixed; bottom: 2rem; right: 2rem; z-index: 90;
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--terracotta); color: var(--white);
-      border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
-      box-shadow: var(--shadow-glow);
-      opacity: 0; transform: translateY(16px); pointer-events: none;
-      transition: all 0.4s var(--ease);
-    }
+    .back-to-top { position: fixed; bottom: 2rem; right: 2rem; z-index: 90; width: 44px; height: 44px; border-radius: 50%; background: var(--terracotta); color: var(--white); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-glow); opacity: 0; transform: translateY(16px); pointer-events: none; transition: all 0.4s var(--ease); }
     .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
     .back-to-top:hover { background: var(--terracotta-dark); transform: translateY(-2px); }
-
-    /* RESPONSIVE */
-    @media (max-width: 1024px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .masonry { columns: 2; }
-      .about-grid { gap: 3rem; }
-      .footer-inner { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .navbar-inner { padding: 0.9rem 1.25rem; }
-      .section { padding: 4.5rem 1.25rem; }
-      .services-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-      .service-card:nth-child(even) { margin-top: 1.25rem; }
-      .process-grid { grid-template-columns: 1fr; gap: 1.25rem; }
-      .masonry { columns: 2; column-gap: 0.75rem; }
-      .masonry-item { margin-bottom: 0.75rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .about-accent, .about-accent-2 { display: none; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .hero-glow, .hero-glow-2 { display: none; }
-    }
-    @media (max-width: 480px) {
-      .services-grid { grid-template-columns: 1fr; }
-      .service-card:nth-child(even) { margin-top: 0; }
-      .masonry { columns: 1; }
-    }
+    @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } .masonry { columns: 2; } .about-grid { gap: 3rem; } .footer-inner { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } .navbar-inner { padding: 0.9rem 1.25rem; } .section { padding: 4.5rem 1.25rem; } .services-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; } .service-card:nth-child(even) { margin-top: 1.25rem; } .process-grid { grid-template-columns: 1fr; gap: 1.25rem; } .masonry { columns: 2; column-gap: 0.75rem; } .masonry-item { margin-bottom: 0.75rem; } .about-grid { grid-template-columns: 1fr; gap: 2.5rem; } .about-accent, .about-accent-2 { display: none; } .form-row { grid-template-columns: 1fr; } .footer-inner { grid-template-columns: 1fr; gap: 2rem; } .footer-bottom { flex-direction: column; text-align: center; } .hero-glow, .hero-glow-2 { display: none; } }
+    @media (max-width: 480px) { .services-grid { grid-template-columns: 1fr; } .service-card:nth-child(even) { margin-top: 0; } .masonry { columns: 1; } }
   </style>
 
   <!-- Structured Data -->
@@ -468,31 +214,22 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Samrid",
-    "description": "Thoughtfully curated home makeover services in Delhi, India. Living room styling, bedroom makeovers, plant styling, and gallery wall design.",
-    "url": "https://samrid.in/",
+    "name": "Decodrama",
+    "description": "Where Every Space Tells a Story. Professional home makeover & interior styling services in Delhi, India. Living room styling, bedroom makeovers, plant styling, and gallery wall design.",
+    "url": "https://decodrama.in/",
     "image": "https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-1_cv3yji.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Delhi",
-      "addressCountry": "IN"
-    },
+    "address": { "@type": "PostalAddress", "addressLocality": "Delhi", "addressCountry": "IN" },
     "areaServed": "India",
     "serviceType": ["Home Styling", "Interior Makeover", "Living Room Styling", "Bedroom Makeover", "Plant Styling", "Gallery Wall Design"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "1"
-    }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "1" }
   }
   </script>
 </head>
 <body>
   <div class="grain-overlay"></div>
-
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
-      <a href="#" class="logo">Samrid</a>
+      <a href="#" class="logo">Decodrama</a>
       <div class="nav-links">
         <a href="#" class="active">Home</a>
         <a href="#services">Services</a>
@@ -500,16 +237,9 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
-      <div style="display:flex;align-items:center;gap:0.5rem;">
-        <div class="nav-icons">
-          <button aria-label="Search"><span class="material-symbols-outlined">search</span></button>
-          <button aria-label="Call"><span class="material-symbols-outlined">call</span></button>
-        </div>
-        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
-
   <div class="mobile-menu" id="mobileMenu">
     <a href="#" onclick="closeMenu()">Home</a>
     <a href="#services" onclick="closeMenu()">Services</a>
@@ -517,17 +247,14 @@
     <a href="#about" onclick="closeMenu()">About</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
   </div>
-
   <main>
   <section class="hero">
-    <div class="hero-bg">
-      <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-1_cv3yji.jpg" alt="Cozy boho living room styled by Samrid" />
-    </div>
+    <div class="hero-bg"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-1_cv3yji.jpg" alt="Cozy boho living room styled by Decodrama — home makeover Delhi" /></div>
     <div class="hero-overlay"></div>
     <div class="hero-glow"></div>
     <div class="hero-glow-2"></div>
     <div class="hero-content">
-      <span class="hero-tag">Spaces That Feel Like You</span>
+      <span class="hero-tag">Where Every Space Tells a Story</span>
       <h1>Make Your Space<br><em>Feel Like Home</em></h1>
       <p>Thoughtfully curated home makeovers inspired by warmth, nature, and simplicity. We transform houses into homes you'll love.</p>
       <div class="hero-cta">
@@ -538,123 +265,52 @@
     <div class="hero-fade"></div>
     <div class="scroll-cue"><span>Scroll</span><div class="scroll-dot"></div></div>
   </section>
-
   <section class="section" id="services">
     <div class="section-inner">
       <div class="services-header reveal">
-        <div>
-          <span class="section-tag">What We Do</span>
-          <h2 class="section-title">Our Styling Services</h2>
-        </div>
+        <div><span class="section-tag">What We Do</span><h2 class="section-title">Our Styling Services</h2></div>
         <a href="#contact" class="btn-text">Book a Consultation &rarr;</a>
       </div>
       <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-2_yy0zj3.jpg" alt="Living room makeover" /></div>
-          <h3>Living Room Makeover</h3>
-          <p>Elevate your common spaces</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/bedroom_exzkg5.jpg" alt="Bedroom styling" /></div>
-          <h3>Bedroom Styling</h3>
-          <p>Create a sanctuary for rest</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/plant-corner_vedntl.jpg" alt="Plant styling" /></div>
-          <h3>Plant Styling</h3>
-          <p>Bring nature inside your home</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244816/staircase-gallery_k0bvgp.jpg" alt="Gallery wall styling" /></div>
-          <h3>Wall Art &amp; Gallery Walls</h3>
-          <p>Meaningful art for every space</p>
-        </div>
+        <div class="service-card reveal"><div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-2_yy0zj3.jpg" alt="Living room makeover service by Decodrama Delhi" /></div><h3>Living Room Makeover</h3><p>Elevate your common spaces</p></div>
+        <div class="service-card reveal"><div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/bedroom_exzkg5.jpg" alt="Bedroom styling service by Decodrama Delhi" /></div><h3>Bedroom Styling</h3><p>Create a sanctuary for rest</p></div>
+        <div class="service-card reveal"><div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/plant-corner_vedntl.jpg" alt="Indoor plant styling service by Decodrama" /></div><h3>Plant Styling</h3><p>Bring nature inside your home</p></div>
+        <div class="service-card reveal"><div class="service-img"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244816/staircase-gallery_k0bvgp.jpg" alt="Gallery wall design service by Decodrama" /></div><h3>Wall Art &amp; Gallery Walls</h3><p>Meaningful art for every space</p></div>
       </div>
     </div>
   </section>
-
   <section class="section process-section">
     <div class="section-inner" style="text-align:center;">
-      <div class="reveal">
-        <span class="section-tag">Simple &amp; Seamless</span>
-        <h2 class="section-title">How It Works</h2>
-        <p class="section-subtitle" style="margin:0.6rem auto 0;">From first call to final reveal, we make the process effortless.</p>
-      </div>
+      <div class="reveal"><span class="section-tag">Simple &amp; Seamless</span><h2 class="section-title">How It Works</h2><p class="section-subtitle" style="margin:0.6rem auto 0;">From first call to final reveal, we make the process effortless.</p></div>
       <div class="process-grid">
-        <div class="process-card reveal">
-          <div class="process-icon"><span class="material-symbols-outlined" style="font-size:1.5rem;">chat_bubble</span></div>
-          <div class="process-num">01</div>
-          <h3>Share Your Vision</h3>
-          <p>Tell us about your space, your style, and how you want to feel at home. We listen first.</p>
-        </div>
-        <div class="process-card reveal">
-          <div class="process-icon"><span class="material-symbols-outlined" style="font-size:1.5rem;">palette</span></div>
-          <div class="process-num">02</div>
-          <h3>We Design &amp; Curate</h3>
-          <p>Our team creates a personalised styling plan with handpicked decor, textures, and layouts.</p>
-        </div>
-        <div class="process-card reveal">
-          <div class="process-icon"><span class="material-symbols-outlined" style="font-size:1.5rem;">home</span></div>
-          <div class="process-num">03</div>
-          <h3>Your Dream Space</h3>
-          <p>We bring it all to life — setting up every detail so you walk into a home that feels like you.</p>
-        </div>
+        <div class="process-card reveal"><div class="process-icon"><span class="material-symbols-outlined" style="font-size:1.5rem;">chat_bubble</span></div><div class="process-num">01</div><h3>Share Your Vision</h3><p>Tell us about your space, your style, and how you want to feel at home. We listen first.</p></div>
+        <div class="process-card reveal"><div class="process-icon"><span class="material-symbols-outlined" style="font-size:1.5rem;">palette</span></div><div class="process-num">02</div><h3>We Design &amp; Curate</h3><p>Our team creates a personalised styling plan with handpicked decor, textures, and layouts.</p></div>
+        <div class="process-card reveal"><div class="process-icon"><span class="material-symbols-outlined" style="font-size:1.5rem;">home</span></div><div class="process-num">03</div><h3>Your Dream Space</h3><p>We bring it all to life — setting up every detail so you walk into a home that feels like you.</p></div>
       </div>
     </div>
   </section>
-
   <section class="section inspiration-section" id="gallery">
     <div class="section-inner">
-      <div style="text-align:center;margin-bottom:3.5rem;" class="reveal">
-        <span class="section-tag">Our Portfolio</span>
-        <h2 class="section-title" style="font-style:italic;">Spaces We've Transformed</h2>
-        <p class="section-subtitle" style="margin:0.6rem auto 0;">Real homes, real transformations. Every space tells a story of warmth and intention.</p>
-      </div>
+      <div style="text-align:center;margin-bottom:3.5rem;" class="reveal"><span class="section-tag">Our Portfolio</span><h2 class="section-title" style="font-style:italic;">Spaces We've Transformed</h2><p class="section-subtitle" style="margin:0.6rem auto 0;">Real homes, real transformations. Every space tells a story of warmth and intention.</p></div>
       <div class="masonry">
-        <div class="masonry-item reveal">
-          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-2_yy0zj3.jpg" alt="Boho living room" />
-          <div class="masonry-overlay"><span>Living Room Transformation</span></div>
-        </div>
-        <div class="masonry-item reveal">
-          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/dining-room_lsoqc9.jpg" alt="Dining room styling" />
-          <div class="masonry-overlay"><span>Dining Room Styling</span></div>
-        </div>
-        <div class="masonry-item reveal">
-          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/bedroom_exzkg5.jpg" alt="Bedroom makeover" />
-          <div class="masonry-overlay"><span>Bedroom Makeover</span></div>
-        </div>
-        <div class="masonry-item reveal">
-          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/staircase-plants_lemftp.jpg" alt="Entryway with plants" />
-          <div class="masonry-overlay"><span>Entryway Design</span></div>
-        </div>
-        <div class="masonry-item reveal">
-          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-3_gkjgn0.jpg" alt="Living room styling" />
-          <div class="masonry-overlay"><span>Complete Room Makeover</span></div>
-        </div>
-        <div class="masonry-item reveal">
-          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/inspo-scandi_isdhfo.jpg" alt="Scandi-boho living room" />
-          <div class="masonry-overlay"><span>Scandi-Boho Fusion</span></div>
-        </div>
-        <div class="masonry-item reveal">
-          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244816/staircase-gallery_k0bvgp.jpg" alt="Gallery wall" />
-          <div class="masonry-overlay"><span>Gallery Wall Setup</span></div>
-        </div>
+        <div class="masonry-item reveal"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-2_yy0zj3.jpg" alt="Boho living room transformation by Decodrama" /><div class="masonry-overlay"><span>Living Room Transformation</span></div></div>
+        <div class="masonry-item reveal"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/dining-room_lsoqc9.jpg" alt="Dining room interior styling" /><div class="masonry-overlay"><span>Dining Room Styling</span></div></div>
+        <div class="masonry-item reveal"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/bedroom_exzkg5.jpg" alt="Bedroom makeover with boho decor" /><div class="masonry-overlay"><span>Bedroom Makeover</span></div></div>
+        <div class="masonry-item reveal"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/staircase-plants_lemftp.jpg" alt="Entryway plant styling design" /><div class="masonry-overlay"><span>Entryway Design</span></div></div>
+        <div class="masonry-item reveal"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/living-room-3_gkjgn0.jpg" alt="Complete room makeover Delhi" /><div class="masonry-overlay"><span>Complete Room Makeover</span></div></div>
+        <div class="masonry-item reveal"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244815/inspo-scandi_isdhfo.jpg" alt="Scandinavian boho living room styling" /><div class="masonry-overlay"><span>Scandi-Boho Fusion</span></div></div>
+        <div class="masonry-item reveal"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244816/staircase-gallery_k0bvgp.jpg" alt="Gallery wall setup with botanical art" /><div class="masonry-overlay"><span>Gallery Wall Setup</span></div></div>
       </div>
     </div>
   </section>
-
   <section class="section" id="about">
     <div class="section-inner">
       <div class="about-grid">
-        <div class="about-img-wrap reveal">
-          <img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/founder_oe4wqu.jpg" alt="Founder of Samrid" />
-          <div class="about-accent"></div>
-          <div class="about-accent-2"></div>
-        </div>
+        <div class="about-img-wrap reveal"><img src="https://res.cloudinary.com/djc8msshl/image/upload/q_auto,f_auto/v1775244814/founder_oe4wqu.jpg" alt="Founder of Decodrama — home styling expert Delhi" /><div class="about-accent"></div><div class="about-accent-2"></div></div>
         <div class="about-text reveal">
           <span class="section-tag">Our Story</span>
           <h2 class="section-title">We believe homes should feel calm, warm, and personal.</h2>
-          <p>Samrid was born from a love of creating beautiful, intentional spaces. In a world that moves too fast, we help you slow down — transforming everyday rooms into sanctuaries that reflect your personality and bring you joy.</p>
+          <p>Decodrama was born from a love of creating beautiful, intentional spaces. In a world that moves too fast, we help you slow down — transforming everyday rooms into sanctuaries that reflect your personality and bring you joy.</p>
           <p>We handpick every piece, every texture, every detail. From boho living rooms with layered rugs and macramé to cozy bedrooms wrapped in fairy lights — we create spaces that feel like a warm hug.</p>
           <blockquote>"Your home is the canvas of your life. We just provide the brushstrokes of warmth."</blockquote>
           <a href="#contact" class="btn-text">Work with us &rarr;</a>
@@ -662,110 +318,137 @@
       </div>
     </div>
   </section>
-
   <section class="section testimonial-section">
     <div class="testimonial-inner reveal">
       <span class="section-tag">Client Love</span>
       <div class="testimonial-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
-      <p class="testimonial-quote">"Samrid completely transformed our home. What was once a plain living room now feels like something straight out of Pinterest. They understood our vibe perfectly — warm, cozy, and full of character."</p>
+      <p class="testimonial-quote">"Decodrama completely transformed our home. What was once a plain living room now feels like something straight out of Pinterest. They understood our vibe perfectly — warm, cozy, and full of character."</p>
       <span class="testimonial-author">&mdash; A Happy Homeowner, Delhi</span>
     </div>
   </section>
-
   <section class="section contact-section" id="contact">
     <div class="contact-inner">
-      <div class="reveal">
-        <span class="section-tag">Get In Touch</span>
-        <h2 class="section-title">Let's Transform Your Space</h2>
-        <p class="section-subtitle" style="margin:0.6rem auto 0;">Ready for a home makeover? Drop us a message and we'll get back to you with a free consultation.</p>
-      </div>
-      <form class="contact-form reveal" onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center;padding:3rem 1rem;\'><span class=\'material-symbols-outlined\' style=\'font-size:3rem;color:var(--sage);margin-bottom:1rem;display:block;\'>check_circle</span><h3 style=\'margin-bottom:0.5rem;\'>Message Sent!</h3><p style=\'color:var(--text-secondary);font-weight:300;\'>We will get back to you within 24 hours.</p></div>';">
+      <div class="reveal"><span class="section-tag">Get In Touch</span><h2 class="section-title">Let's Transform Your Space</h2><p class="section-subtitle" style="margin:0.6rem auto 0;">Ready for a home makeover? Drop us a message and we'll get back to you with a free consultation.</p></div>
+      <form class="contact-form reveal" id="contactForm" novalidate>
         <div class="form-row">
-          <div class="form-group"><label>Name</label><input type="text" placeholder="Your full name" required /></div>
-          <div class="form-group"><label>Email</label><input type="email" placeholder="hello@example.com" required /></div>
+          <div class="form-group">
+            <label for="formName">Name</label>
+            <input type="text" id="formName" placeholder="Your full name" required />
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="formEmail">Email</label>
+            <input type="email" id="formEmail" placeholder="hello@example.com" required />
+            <span class="form-error" id="emailError"></span>
+          </div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label>Phone</label><input type="tel" placeholder="+91 98765 43210" /></div>
-          <div class="form-group"><label>Service</label><input type="text" placeholder="e.g. Living Room Makeover" /></div>
+          <div class="form-group">
+            <label for="formPhone">Phone</label>
+            <input type="tel" id="formPhone" placeholder="+91 98765 43210" />
+            <span class="form-error" id="phoneError"></span>
+          </div>
+          <div class="form-group">
+            <label for="formService">Service</label>
+            <input type="text" id="formService" placeholder="e.g. Living Room Makeover" />
+          </div>
         </div>
-        <div class="form-group" style="margin-top:0.25rem;"><label>Message</label><textarea rows="5" placeholder="Tell us about your space and what you're looking for..." required></textarea></div>
+        <div class="form-group" style="margin-top:0.25rem;">
+          <label for="formMessage">Message</label>
+          <textarea rows="5" id="formMessage" placeholder="Tell us about your space and what you're looking for..." required></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAC0RA3ni8f8xkPqW" data-theme="light"></div>
+        <span class="form-error" id="turnstileError" style="text-align:center;display:block;"></span>
         <div class="form-submit"><button type="submit" class="btn-primary">Send Message</button></div>
       </form>
     </div>
   </section>
   </main>
-
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="#" class="logo">Samrid</a>
-        <p>Spaces that feel like you. Thoughtful home makeovers that bring warmth, character, and soul to your spaces. Based in Delhi, styling homes across India.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="#">Living Room Styling</a>
-        <a href="#">Bedroom Makeover</a>
-        <a href="#">Plant Styling</a>
-        <a href="#">Gallery Wall Setup</a>
-        <a href="#">Full Home Makeover</a>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <a href="#">Instagram</a>
-        <a href="#">Pinterest</a>
-        <a href="#">YouTube</a>
-        <a href="#">WhatsApp</a>
-      </div>
+      <div class="footer-brand"><a href="#" class="logo">Decodrama</a><p>Where every space tells a story. Thoughtful home makeovers that bring warmth, character, and soul to your spaces. Based in Delhi, styling homes across India.</p></div>
+      <div class="footer-col"><h4>Services</h4><a href="#">Living Room Styling</a><a href="#">Bedroom Makeover</a><a href="#">Plant Styling</a><a href="#">Gallery Wall Setup</a><a href="#">Full Home Makeover</a></div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Samrid. Spaces That Feel Like You.</p>
-      <div class="footer-social"><a href="#">Privacy</a><a href="#">Terms</a></div>
-    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Decodrama. Where Every Space Tells a Story.</p><div class="footer-social"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
   </footer>
-
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <span class="material-symbols-outlined" style="font-size:1.2rem;">arrow_upward</span>
-  </button>
-
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><span class="material-symbols-outlined" style="font-size:1.2rem;">arrow_upward</span></button>
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-    });
-    function closeMenu() {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
+    const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu');hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';});function closeMenu(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow='';}
+    const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>50);},{passive:true});
+    const backToTop=document.getElementById('backToTop');window.addEventListener('scroll',()=>{backToTop.classList.toggle('visible',window.scrollY>500);},{passive:true});backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});
+    const reveals=document.querySelectorAll('.reveal');const obs=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*60);obs.unobserve(entry.target);}});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});reveals.forEach(el=>obs.observe(el));
+    document.querySelectorAll('img').forEach(img=>{if(img.complete&&img.naturalHeight!==0){img.classList.add('loaded');}else{img.addEventListener('load',()=>img.classList.add('loaded'));img.addEventListener('error',()=>{img.style.opacity='1';img.style.background='linear-gradient(135deg,var(--warm-beige),var(--terracotta-light))';img.style.minHeight='200px';});}});
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const href=a.getAttribute('href');if(href==='#')return;const target=document.querySelector(href);if(target){e.preventDefault();window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});}});});
+
+    // Form validation
+    const contactForm = document.getElementById('contactForm');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[\+]?[\d\s\-()]{7,15}$/;
+
+    function clearErrors() {
+      contactForm.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+      contactForm.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
     }
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); }, { passive: true });
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => { backToTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
-    backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-    const reveals = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('visible'), i * 60); obs.unobserve(entry.target); }
+
+    function setError(inputId, errorId, msg) {
+      document.getElementById(inputId).classList.add('invalid');
+      document.getElementById(errorId).textContent = msg;
+    }
+
+    // Clear error on input
+    contactForm.querySelectorAll('input, textarea').forEach(el => {
+      el.addEventListener('input', () => {
+        el.classList.remove('invalid');
+        const err = el.parentElement.querySelector('.form-error');
+        if (err) err.textContent = '';
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => obs.observe(el));
-    document.querySelectorAll('img').forEach(img => {
-      if (img.complete && img.naturalHeight !== 0) { img.classList.add('loaded'); }
-      else {
-        img.addEventListener('load', () => img.classList.add('loaded'));
-        img.addEventListener('error', () => { img.style.opacity = '1'; img.style.background = 'linear-gradient(135deg, var(--warm-beige), var(--terracotta-light))'; img.style.minHeight = '200px'; });
-      }
     });
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const href = a.getAttribute('href');
-        if (href === '#') return;
-        const target = document.querySelector(href);
-        if (target) { e.preventDefault(); window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); }
-      });
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      clearErrors();
+      let valid = true;
+
+      const name = document.getElementById('formName').value.trim();
+      const email = document.getElementById('formEmail').value.trim();
+      const phone = document.getElementById('formPhone').value.trim();
+      const message = document.getElementById('formMessage').value.trim();
+
+      if (!name) {
+        setError('formName', 'nameError', 'Please enter your name.');
+        valid = false;
+      }
+
+      if (!email) {
+        setError('formEmail', 'emailError', 'Please enter your email.');
+        valid = false;
+      } else if (!emailRegex.test(email)) {
+        setError('formEmail', 'emailError', 'Please enter a valid email address.');
+        valid = false;
+      }
+
+      if (phone && !phoneRegex.test(phone)) {
+        setError('formPhone', 'phoneError', 'Please enter a valid phone number.');
+        valid = false;
+      }
+
+      if (!message) {
+        setError('formMessage', 'messageError', 'Please enter a message.');
+        valid = false;
+      }
+
+      // Cloudflare Turnstile check
+      const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
+      if (!turnstileResponse || !turnstileResponse.value) {
+        document.getElementById('turnstileError').textContent = 'Please complete the verification.';
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      // Success
+      contactForm.innerHTML = '<div style="text-align:center;padding:3rem 1rem;"><span class="material-symbols-outlined" style="font-size:3rem;color:var(--sage);margin-bottom:1rem;display:block;">check_circle</span><h3 style="margin-bottom:0.5rem;">Message Sent!</h3><p style="color:var(--text-secondary);font-weight:300;">We will get back to you within 24 hours.</p></div>';
     });
   </script>
 </body>
